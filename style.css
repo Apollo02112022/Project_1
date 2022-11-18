@@ -1,29 +1,40 @@
+body {
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: 60px 38.5px 470px 38.5px 60px;
+    background-image: url(images/cosmos.jpg);
+}
+
 header {
     background-color: rgb(0, 0, 0);
     height: 60px;
-    width: 360px;
+    width: 375px;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
     color: rgb(249, 246, 246);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-row: 1;
 }
 
 .img_1 {
-    border:1px solid rgb(249, 246, 246);
-    height: 40px;
     width: 40px;
 }
 
-h1 {
-    border: 1px solid white;
+.img_1 img {
+    max-width: 100%;
+    border: 2px solid rgb(249, 246, 246);
+    border-radius: 5px;
 }
 
-.container_1 {
+main {
     height: 470px;
-    width: 360px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    width: 375px;
     display:grid;
-    grid-template-columns: 20px 70px 20px 230px 20px;
+    grid-template-columns: 25px 70px 25px 230px 25px;
     grid-template-rows: 470px;
-    background-color:rgb(83, 83, 204);
+    grid-row: 3;
 }
 
 aside {
@@ -34,11 +45,13 @@ aside {
     grid-column-start: 2;
     grid-column-end: span 1;
     grid-row: 1;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
     color: rgb(249, 246, 246);
     text-align: center;
 } 
 
-.container_2 {
+.container_1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,15 +60,52 @@ aside {
     grid-column-start: 4;
     grid-column-end: span 1; 
     grid-row: 1;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
+    color: rgb(249, 246, 246);
 }
 
-.box_1 {
+.bigbox {
     background-color: rgb(0, 0, 0);
     border-radius: 15px;
     height: 175px;
     width: 230px;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
     color: rgb(249, 246, 246);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.box_1 {
+    width: 230px;
+    font-family: 'Sono', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(249, 246, 246);
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.little_box_1a,.little_box_1b  {
+    background-color: rgb(249, 246, 246);
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+}
+
+.little_box_1a {
+    background-image: url(images/urss.png);
+    background-size:cover;
+}
+
+.little_box_1b {
+    background-image: url(images/usa.jpg);
+    background-size:cover;
 }
 
 .box_2 {
@@ -63,8 +113,26 @@ aside {
     border-radius: 15px;
     height: 125px;
     width: 230px;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
     color: rgb(249, 246, 246);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img_4 {
+    width: 150px;
+}
+
+.img_4 img {
+    max-width: 100%;
+    border: 2px solid rgb(249, 246, 246);
+    border-radius: 5px;
+    
+    
 }
 
 .box_3 {
@@ -72,14 +140,41 @@ aside {
     border-radius: 15px;
     height: 125px;
     width: 230px;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
     color: rgb(249, 246, 246);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img_5 {
+    width: 100px;
+}
+
+.img_5 img {
+    max-width: 100%;
+    border: 2px solid rgb(249, 246, 246);
+    border-radius: 5px;
 }
 
 footer {
     background-color: rgb(0, 0, 0);
     height: 60px;
-    width: 360px;
+    width: 375px;
+    font-family: 'Sono', sans-serif;
+    font-size: 0.7rem;
     color: rgb(249, 246, 246);
     text-align: center;
+    position: relative;
+    grid-row: 5;
+}
+
+footer p {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
