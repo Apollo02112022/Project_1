@@ -1,21 +1,37 @@
+:root {
+    --primary-color:rgb(249, 246, 246);
+    --primary-background-color:rgb(0, 0, 0);
+    --primary-border-color: rgb(249, 246, 246);
+}
+
 body {
     display: grid;
     grid-template-columns: 375px;
     grid-template-rows: 60px 38.5px 470px 38.5px 60px;
-    background-image: url(images/cosmos.jpg);
 }
 
 header {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-background-color);
     height: 60px;
     width: 375px;
     font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     grid-row: 1;
+}
+
+.background {
+    height: 667px;
+    width: 375px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(images/cosmos.jpg);
+    z-index: -1;
 }
 
 .img_1 {
@@ -24,7 +40,7 @@ header {
 
 .img_1 img {
     max-width: 100%;
-    border: 2px solid rgb(249, 246, 246);
+    border: 2px solid var(--primary-border-color);
     border-radius: 5px;
 }
 
@@ -38,7 +54,7 @@ main {
 }
 
 aside {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 470px;
     width: 70px;
@@ -47,9 +63,22 @@ aside {
     grid-row: 1;
     font-family: 'Sono', sans-serif;
     font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 } 
+
+.button {
+    height: 20px;
+    width: 20px;
+    background-color:rgb(249, 246, 246);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
 
 .container_1 {
     display: flex;
@@ -62,17 +91,18 @@ aside {
     grid-row: 1;
     font-family: 'Sono', sans-serif;
     font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    color: var(--primary-color);
 }
 
 .bigbox {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 175px;
     width: 230px;
     font-family: 'Sono', sans-serif;
     font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -85,17 +115,22 @@ aside {
     font-family: 'Sono', sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    color: rgb(249, 246, 246);
+    color: var(--primary-color);
     text-align: center;
     display: flex;
     justify-content: space-evenly;
 }
 
+.box_1 a {
+    color: var(--primary-color);
+}
+
 .little_box_1a,.little_box_1b  {
-    background-color: rgb(249, 246, 246);
+    border: 2px solid var(--primary-border-color);
     border-radius: 5px;
     height: 80px;
     width: 80px;
+    position: relative;
 }
 
 .little_box_1a {
@@ -108,14 +143,29 @@ aside {
     background-size:cover;
 }
 
+.text_1 {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text_2 {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .box_2 {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 125px;
     width: 230px;
     font-family: 'Sono', sans-serif;
     font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -129,20 +179,21 @@ aside {
 
 .img_4 img {
     max-width: 100%;
-    border: 2px solid rgb(249, 246, 246);
+    border: 2px solid var(--primary-border-color);
     border-radius: 5px;
     
     
 }
 
 .box_3 {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 125px;
     width: 230px;
     font-family: 'Sono', sans-serif;
     font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -156,17 +207,22 @@ aside {
 
 .img_5 img {
     max-width: 100%;
-    border: 2px solid rgb(249, 246, 246);
+    border: 2px solid var(--primary-border-color);
     border-radius: 5px;
 }
 
+a {
+    text-decoration: none;
+}
+
 footer {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--primary-background-color);
     height: 60px;
     width: 375px;
     font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
-    color: rgb(249, 246, 246);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
     text-align: center;
     position: relative;
     grid-row: 5;
@@ -178,3 +234,21 @@ footer p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        box-shadow: 0 0 0 0 rgb(249, 246, 246 0.7);
+    } 
+    50%{
+        transform: scale(1);
+        box-shadow: 0 0 0 5px rgb(249, 246, 246);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+/* @media (min-width: 320px) and (max-width: 1024px) {
+    
+} */
