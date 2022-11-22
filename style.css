@@ -2,36 +2,35 @@
     --primary-color:rgb(249, 246, 246);
     --primary-background-color:rgb(0, 0, 0);
     --primary-border-color: rgb(249, 246, 246);
+    --primary-font-size: 0.7rem;
+    --secondary-font-size: 0.6rem;
 }
 
 body {
     display: grid;
-    grid-template-columns: 375px;
-    grid-template-rows: 60px 38.5px 470px 38.5px 60px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr 60px;
+    gap: 10px;
 }
 
 header {
     background-color: var(--primary-background-color);
-    height: 60px;
-    width: 375px;
-    font-family: 'Sono', sans-serif;
-    font-size: 0.8rem;
-    font-weight: bold;
     color: var(--primary-color);
+    font-family: 'Sono', sans-serif;
+    font-size: var(--primary-font-size);
+    font-weight: bold;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     grid-row: 1;
 }
 
 .background {
-    height: 667px;
-    width: 375px;
     position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(images/cosmos.jpg);
     z-index: -1;
+    background-image: url(images/cosmos.jpg);
+    height: 100%;
+    width: 100%;
 }
 
 .img_1 {
@@ -45,24 +44,21 @@ header {
 }
 
 main {
-    height: 470px;
-    width: 375px;
-    display:grid;
-    grid-template-columns: 25px 70px 25px 230px 25px;
-    grid-template-rows: 470px;
-    grid-row: 3;
+    height: calc(100vh - 120px);
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-rows: 1fr;
+    grid-row: 2;
 }
 
 aside {
     background-color: var(--primary-background-color);
     border-radius: 15px;
-    height: 470px;
-    width: 70px;
-    grid-column-start: 2;
-    grid-column-end: span 1;
+    min-width: 70px;
+    grid-column: 2 / 3;
     grid-row: 1;
     font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
+    font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
     text-align: center;
@@ -84,10 +80,8 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 470px;
-    width: 230px; 
-    grid-column-start: 4;
-    grid-column-end: span 1; 
+    width: 220px; 
+    grid-column: 4 / 5;
     grid-row: 1;
     font-family: 'Sono', sans-serif;
     font-size: 0.7rem;
@@ -98,9 +92,9 @@ aside {
     background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 175px;
-    width: 230px;
+    width: 220px;
     font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
+    font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
     text-align: center;
@@ -111,7 +105,7 @@ aside {
 }
 
 .box_1 {
-    width: 230px;
+    width: 220px;
     font-family: 'Sono', sans-serif;
     font-size: 1rem;
     font-weight: bold;
@@ -145,14 +139,14 @@ aside {
 
 .text_1 {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .text_2 {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -161,9 +155,9 @@ aside {
     background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 125px;
-    width: 230px;
+    width: 220px;
     font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
+    font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
     text-align: center;
@@ -181,17 +175,15 @@ aside {
     max-width: 100%;
     border: 2px solid var(--primary-border-color);
     border-radius: 5px;
-    
-    
 }
 
 .box_3 {
     background-color: var(--primary-background-color);
     border-radius: 15px;
     height: 125px;
-    width: 230px;
+    width: 220px;
     font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
+    font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
     text-align: center;
@@ -217,20 +209,18 @@ a {
 
 footer {
     background-color: var(--primary-background-color);
-    height: 60px;
-    width: 375px;
-    font-family: 'Sono', sans-serif;
-    font-size: 0.8rem;
-    font-weight: bold;
     color: var(--primary-color);
+    font-family: 'Sono', sans-serif;
+    font-size: var(--primary-font-size);
+    font-weight: bold;
     text-align: center;
     position: relative;
-    grid-row: 5;
+    grid-row: 3;
 }
 
 footer p {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -249,6 +239,31 @@ footer p {
     }
 }
 
-/* @media (min-width: 320px) and (max-width: 1024px) {
-    
-} */
+@media (min-width: 768px) {
+   
+    main {
+       height: calc(100vh - 120px);
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+   }  
+         
+   aside {
+       height: 70px;
+       width: 470px;
+       flex-direction: row;
+       }
+
+     .container_1 {
+       height: 175px;
+       width: 768px;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       }
+
+   .box_2, .box_3 {
+       height: 175px;
+   }
+}
