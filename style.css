@@ -94,6 +94,10 @@ h1 {
     text-align: center;
     font-size: var(--secondary-font-size);
     font-weight: bold;
+} 
+
+.visible {
+    display: initial;
 }
 
 /* <========== Main ==========> */

@@ -4,17 +4,13 @@ const btn = document.querySelector(".btn");
 
 const modeMobile = document.querySelector(".mode-mobile"); 
 
-btn.addEventListener("click", function () {
-    modeMobile.style.display = "initial";
-}); 
-
 // btn.addEventListener("click", function () {
-//     if(modeMobile.style.display = "initial") {
-//         modeMobile.style.display = "none";
-//     };
+//     modeMobile.style.display = "initial";
 // }); 
 
-
+btn.addEventListener("click", function () {
+    modeMobile.classList.toggle("visible"); 
+}); 
 
 // <========== Carousel ==========>
 
