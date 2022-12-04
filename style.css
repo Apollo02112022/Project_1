@@ -22,6 +22,10 @@ body{
     background-size: cover;
     height: 845px;
     width: 100%;
+} 
+
+.background-video {
+    display: none;
 }
 
 /* <========== Header ==========> */
@@ -409,20 +413,29 @@ footer p {
         --secondary-font-size: 0.7rem;
     }
 
+    body{
+        grid-template-rows: 60px 1fr 60px;
+    }
+
+    .background {
+        height: 100%;
+    }
+
     main { 
         height: calc(100vh - 120px);
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 0;
     }
 
     aside {
-        min-height: 445px;
+        height: 445px;
         min-width: 80px;
     }
 
     .container_1 {
-        min-height: 445px; 
+        height: 445px; 
         min-width: 230px;
     }
 
@@ -434,7 +447,7 @@ footer p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 445px; 
+        height: 445px; 
         min-width: 310px;
     }
 
@@ -480,11 +493,27 @@ footer p {
     .slides img {
         min-width: 240px;
     }
-
+    
 } 
 
 @media (min-width: 1024px) {
+  
+    .background {
+        display: none;
+    }
 
+    .background-video {
+        display: initial;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+   }
 
+   .background-video video {
+        height: 100%; 
+        width: 100%;
+        object-fit: cover;
+   }
 
 }
