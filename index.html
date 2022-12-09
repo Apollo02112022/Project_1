@@ -21,21 +21,32 @@
         
         <div class="menu-burger">
                         
-            <button class="btn">
+            <button class="open_btn">
                 <div class="barre"></div>
                 <div class="barre"></div>
                 <div class="barre"></div>
             </button> 
-                        
+            
+            <img class = close_btn src="icons/cross.png" alt="cross">
+                                    
             <nav class="mode-mobile">
-              <ul>
-                <li>Accueil</li>
-                <li>Galeries</li>
-                <li>Accidents<br>Incidents</li>
-                <li>Contact</li>
-              </ul>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="https://webbtelescope.org/home">Galerie</a></li>
+                    <li><a href="https://fr.wikipedia.org/wiki/Accidents_et_incidents_li%C3%A9s_%C3%A0_la_conqu%C3%AAte_spatiale">Accidents<br>Incidents</a></li>
+                    <li>Contact</li>
+                </ul>
+            </nav> 
+
+           <nav class="mode-desktop">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="https://webbtelescope.org/home">Galerie</a></li>
+                    <li><a href="https://fr.wikipedia.org/wiki/Accidents_et_incidents_li%C3%A9s_%C3%A0_la_conqu%C3%AAte_spatiale">Accidents<br>Incidents</a></li>
+                    <li>Contact</li>
+                </ul>
             </nav>
-          
+                     
         </div>
 
     </header>
@@ -43,7 +54,9 @@
     <div class="background"></div> 
 
     <div class="background-video">
-        <video src="video/asteroids.mp4" autoplay loop></video>
+        <video autoplay loop muted>
+            <source src="video/asteroids.mp4" type="video/mp4">
+        </video>
     </div>
     
     <main>
@@ -98,29 +111,30 @@
 
             </section>
             
-            <a href="https://fr.wikipedia.org/wiki/Liste_des_sondes_spatiales">
-                <section class="box_2">
-                
+            
+            <section class="box_2">
+
+                <a href="https://fr.wikipedia.org/wiki/Liste_des_sondes_spatiales">
                     <div class="img_4">
                         <img src="images/space-probe.jpg" alt="space_probe">
                     </div>
-                
-                    <h4>Sondes spatiales</h4>
+                </a>
 
-                </section>
-            </a>
-            
-            <a href="https://fr.wikipedia.org/wiki/Liste_de_missions_vers_Mars">
-                <section class="box_3">
+                <h4>Sondes spatiales</h4>
 
+            </section>
+           
+            <section class="box_3">
+
+                <a href="https://fr.wikipedia.org/wiki/Liste_de_missions_vers_Mars">
                     <div class="img_5">
                         <img src="images/missions-to-mars.jpg" alt="mars">
                     </div>
-                
-                    <h4>Missions sur Mars</h4>
+                </a>
 
-                </section>
-            </a>
+                <h4>Missions sur Mars</h4>
+
+            </section>
 
         </div>
 
@@ -129,10 +143,13 @@
             <div class="little_box_4a">
 
             <div class="slides">
-                    <a href="https://www.cieletespace.fr/actualites/une-alerte-incendie-dans-la-station-spatiale-internationale"><img class="start" src="slides/space-station.jpg" alt="space-station"></a>
-                    <a href="https://www.cieletespace.fr/actualites/decollage-reussi-pour-falcon-heavy"><img src="slides/rocket-launch.jpg" alt="rocket-launch"></a>
-                    <a href="https://www.cieletespace.fr/actualites/il-y-a-50-ans-apollo-12-realisait-la-premiere-exploration-de-la-lune"><img src="slides/moon-landing.jpg" alt="moon-landing"></a>
-                </div> 
+                    <a href="https://www.cieletespace.fr/actualites/une-alerte-incendie-dans-la-station-spatiale-internationale"><img class="img start" src="slides/space-station.jpg" alt="space-station"></a>
+                    <a href="https://www.cieletespace.fr/actualites/decollage-reussi-pour-falcon-heavy"><img class="img" src="slides/rocket-launch.jpg" alt="rocket-launch"></a>
+                    <a href="https://www.cieletespace.fr/actualites/il-y-a-50-ans-apollo-12-realisait-la-premiere-exploration-de-la-lune"><img class="img" src="slides/moon-landing.jpg" alt="moon-landing"></a>
+            
+            <div class="imgs"></div>
+
+            </div> 
 
                 <h4>Articles du moment</h4>
             </div>
@@ -149,20 +166,20 @@
             
             <div class="box_4bis">
 
-                <div class="little_box_4a">
+                <div class="little_box_4abis">
 
-                <div class="slides">
-                        <a href="https://www.cieletespace.fr/actualites/une-alerte-incendie-dans-la-station-spatiale-internationale"><img class="start" src="slides/space-station.jpg" alt="space-station"></a>
-                        <a href="https://www.cieletespace.fr/actualites/decollage-reussi-pour-falcon-heavy"><img src="slides/rocket-launch.jpg" alt="rocket-launch"></a>
-                        <a href="https://www.cieletespace.fr/actualites/il-y-a-50-ans-apollo-12-realisait-la-premiere-exploration-de-la-lune"><img src="slides/moon-landing.jpg" alt="moon-landing"></a>
+                    <div class="slides2">
+                        <a href="https://www.cieletespace.fr/actualites/une-alerte-incendie-dans-la-station-spatiale-internationale"><img class=" img2 start2" src="slides/space-station.jpg" alt="space-station"></a>
+                        <a href="https://www.cieletespace.fr/actualites/decollage-reussi-pour-falcon-heavy"><img class="img2" src="slides/rocket-launch.jpg" alt="rocket-launch"></a>
+                        <a href="https://www.cieletespace.fr/actualites/il-y-a-50-ans-apollo-12-realisait-la-premiere-exploration-de-la-lune"><img class="img2" src="slides/moon-landing.jpg" alt="moon-landing"></a>
                     </div> 
 
-                    <h4>Articles du moment</h4>
+                    <h4 class="h4bis">Articles du moment</h4>
                 </div>
 
-                <div class="left"><img src="icons/left-rocket.png" alt="left"></div>
+                <div class="left2"><img src="icons/left-rocket.png" alt="left"></div>
             
-                <div class="right"><img src="icons/right-rocket.png" alt="right"></div> 
+                <div class="right2"><img src="icons/right-rocket.png" alt="right"></div> 
             
             </div> 
 
@@ -171,18 +188,18 @@
                 <h4>Liens utiles</h4>
                 
                 <ul>
-                    <a href="https://www.esa.int/"><li><img src="icons/meteorite.png" alt="metorite"> Site officiel de l'ESA</li></a>
-                    <a href="https://www.nasa.gov/index.html"><li><img src="icons/meteorite.png" alt="metorite"> Site officiel de la NASA</li></a>
-                    <a href="https://www.planete-astronomie.eu/"><li><img src="icons/meteorite.png" alt="metorite"> Notre système solaire</li></a>
-                    <a href="https://www.google.fr/maps/@44.9608204,16.5612294,22992062m/data=!3m1!1e3"><li><img src="icons/meteorite.png" alt="metorite"> Visitez les planètes du<br>système solaire avec Google</li></a>
+                    <li><a href="https://www.esa.int/"><img src="icons/meteorite.png" alt="metorite"> Site officiel de l'ESA</a></li>
+                    <li><a href="https://www.nasa.gov/index.html"><img src="icons/meteorite.png" alt="metorite"> Site officiel de la NASA</a></li>
+                    <li><a href="https://ustream.tv/channel/9408562"><img src="icons/meteorite.png" alt="metorite"> En direct depuis l'ISS</a></li>
+                    <li><a href="https://www.google.fr/maps/@44.9608204,16.5612294,22992062m/data=!3m1!1e3"><img src="icons/meteorite.png" alt="metorite"> Visitez les planètes du système solaire</a></li>
                 </ul>
             
             </div>
         
-            <!-- <========== ==========> -->
+            <!-- <========== ==========> --> 
 
-        </div>        
-    
+        </div> 
+            
     </main>
     
     <footer>
