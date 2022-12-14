@@ -10,7 +10,7 @@
 /* Mise en place d'un grid dans le body pour placer correctement le header, le main et le footer.  */
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: 60px 725px 60px;
 }
@@ -127,10 +127,6 @@ h1 {
     color: rgb(0, 0, 0);
 }
 
-.visible {
-    display: initial;
-}
-
 .mode-desktop {
     display: none;
 }
@@ -138,12 +134,11 @@ h1 {
 /* <========== Main ==========> */
 
 main {
-    height: calc(100vh - 120px);
+    height: calc(100% - 120px);
     display: grid;
     grid-template-columns: 70px 220px;
     grid-template-rows: 445px 250px;
     gap: 10px;
-    row-gap: 10px;
     position: absolute;
     z-index: 1; 
     top: 50%;
@@ -452,7 +447,6 @@ footer p {
     }
 
     main { 
-        height: calc(100vh - 120px);
         display: flex;
         justify-content: space-around;
         gap: 20px;
@@ -624,6 +618,7 @@ footer p {
    }
   
     .mode-desktop {
+        display: none;
         height: calc(100vh - 120px);
         width: 150px;
         background-color: rgb(0, 0, 0, 0.5);
@@ -655,9 +650,4 @@ footer p {
     .mode-desktop ul li:hover {
         transform: scale(1.5);
     } 
-
-    /* .visible_2 {
-        display: initial;
-    } */
-
 }

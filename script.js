@@ -1,4 +1,4 @@
-// <========== Menu-burger (mobile) ==========>
+// <========== Menu-burger (mobile et desktop) ==========>
 
 const openBtn = document.querySelector(".open_btn");
 
@@ -10,27 +10,35 @@ closeBtn.style.cursor = "pointer";
 
 const modeMobile = document.querySelector(".mode-mobile"); 
 
+const modeDesktop = document.querySelector(".mode-desktop");
+
 openBtn.addEventListener("click", function () {
-    closeBtn.style.zIndex = "1"
-    modeMobile.style.display = "initial"
+    
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+        closeBtn.style.zIndex = "1"
+        modeMobile.style.display = "none"
+        modeDesktop.style.display = "initial"
+    }
+    else {
+        closeBtn.style.zIndex = "1"
+        modeMobile.style.display = "initial"
+        modeDesktop.style.display = "none"
+    }
 }); 
 
 closeBtn.addEventListener("click", function () {
-    closeBtn.style.zIndex = "-1"
-    modeMobile.style.display = "none"
+    
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+        closeBtn.style.zIndex = "-1"
+        modeMobile.style.display = "none"
+        modeDesktop.style.display = "none"
+    }
+    else {
+        closeBtn.style.zIndex = "-1"
+        modeMobile.style.display = "none"
+        modeDesktop.style.display = "none"
+    }
 });
-
-// <========== Menu-burger (desktop) ==========>
-
-const modeDesktop = document.querySelector(".mode-desktop"); 
-
-// openBtn.addEventListener("click", function () {
-//     modeDesktop.style.display = "initial"
-// }); 
-
-// closeBtn.addEventListener("click", function () {
-//     modeMobile.style.display = "none"
-// });
 
 // <========== Slider avant 768px ==========>
 
@@ -50,7 +58,7 @@ left.style.cursor = "pointer";
 
 right.addEventListener("click", function () {
 
-    img[i].classList.remove("start")
+    array[i].classList.remove("start")
     
     if (i < array.length-1) {
         i++;
@@ -59,12 +67,12 @@ right.addEventListener("click", function () {
         i = 0;
     }
 
-    img[i].classList.add("start")
+    array[i].classList.add("start")
 }); 
 
 left.addEventListener("click", function () {
 
-    img[i].classList.remove("start")
+    array[i].classList.remove("start")
     
     if (i > 0) {
         i--;
@@ -73,9 +81,8 @@ left.addEventListener("click", function () {
         i = array.length-1;
     }
 
-    img[i].classList.add("start")
+    array[i].classList.add("start")
 });
-
 
 // <========== Slider à partir de 768px ==========>
 
@@ -95,7 +102,7 @@ left2.style.cursor = "pointer";
 
 right2.addEventListener("click", function () {
 
-    img2[j].classList.remove("start2")
+    array2[j].classList.remove("start2")
     
     if (j < array2.length-1) {
         j++;
@@ -104,12 +111,12 @@ right2.addEventListener("click", function () {
         j = 0;
     }
 
-    img2[j].classList.add("start2")
+    array2[j].classList.add("start2")
 }); 
 
 left2.addEventListener("click", function () {
 
-    img2[j].classList.remove("start2")
+    array2[j].classList.remove("start2")
     
     if (j > 0) {
         j--;
@@ -118,7 +125,7 @@ left2.addEventListener("click", function () {
         j = array2.length-1;
     }
 
-    img2[j].classList.add("start2")
+    array2[j].classList.add("start2")
 });
 
 
