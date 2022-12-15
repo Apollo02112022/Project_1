@@ -4,7 +4,7 @@
     --primary-border-color: rgb(249, 246, 246);
     --primary-font-size: 0.7rem;
     --secondary-font-size: 0.6rem;
-    --primary-media-font-size: 1rem;
+    --primary-font-family: 'Sono', sans-serif;
 }
 
 /* Mise en place d'un grid dans le body pour placer correctement le header, le main et le footer.  */
@@ -38,7 +38,7 @@ header {
     background-color: var(--primary-background-color);
     height: 60px;
     color: var(--primary-color);
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--primary-font-size);
     font-weight: bold;
     position: relative;
@@ -53,7 +53,7 @@ header {
     border: 2px solid var(--primary-border-color);
     border-radius: 5px;
     background-image: url(images/logo.png);
-    background-size: cover;
+    background-size: 100%;
     margin-top: 2px;
     margin-left: 10px;
 }
@@ -156,7 +156,7 @@ aside {
     width: 70px;
     grid-column: 1 / 2;
     grid-row: 1;
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
@@ -185,8 +185,8 @@ aside {
     width: 220px; 
     grid-column: 2 / 3;
     grid-row: 1;
-    font-family: 'Sono', sans-serif;
-    font-size: 0.7rem;
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
     color: var(--primary-color);
 }
 
@@ -197,7 +197,7 @@ aside {
     border-radius: 15px;
     height: 175px;
     width: 220px;
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
@@ -210,7 +210,7 @@ aside {
 
 .box_1 {
     width: 220px;
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: 1rem;
     font-weight: bold;
     color: var(--primary-color);
@@ -262,7 +262,7 @@ aside {
     border-radius: 15px;
     height: 125px;
     width: 220px;
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
@@ -290,7 +290,7 @@ aside {
     border-radius: 15px;
     height: 125px;
     width: 220px;
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--secondary-font-size);
     font-weight: bold;
     color: var(--primary-color);
@@ -346,7 +346,7 @@ aside {
 
 .little_box_4a h4 {
     color: rgb(249, 246, 246);
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--secondary-font-size); 
     font-weight: bold;
     text-align: center;
@@ -398,7 +398,7 @@ footer {
     background-color: var(--primary-background-color);
     height: 60px;
     color: var(--primary-color);
-    font-family: 'Sono', sans-serif;
+    font-family: var(--primary-font-family);
     font-size: var(--primary-font-size);
     font-weight: bold;
     text-align: center;
@@ -498,7 +498,7 @@ footer p {
     
     .h4bis {
         color: rgb(249, 246, 246);
-        font-family: 'Sono', sans-serif;
+        font-family: var(--primary-font-family);
         font-size: var(--secondary-font-size); 
         font-weight: bold;
         text-align: center;
@@ -551,7 +551,7 @@ footer p {
         background-color: var(--primary-background-color);
         border-radius: 15px;
         color: var(--primary-color);
-        font-family: 'Sono', sans-serif;
+        font-family: var(--primary-font-family);
         font-size: var(--secondary-font-size); 
         font-weight: bold;
         text-align: center;
@@ -639,7 +639,7 @@ footer p {
         padding-top: 30px;
         padding-bottom: 30px;
         text-align: center;
-        font-size: 1rem;
+        font-size: var(--primary-font-size);
         font-weight: bold;
     } 
 
